@@ -1,28 +1,22 @@
-pipeline { 
-  
-   agent any
+pipeline {
+    agent any
 
-   stages {
-   
-     stage('Install Dependencies') { 
-        ste ps { 
-           sh 'npm install' 
+    stages {
+        stage('git clone') {
+            steps {
+                git 'https://github.com/Komala-3/demo'
+            }
         }
-     }
+        stage('Test') {
+            steps {
+                echo "im going to test my repo"
+            }
+        }
+        stage('build') {
+            steps {
+               echo "test is success and build completed"
+            }
+        }
      
-     stage('Test') { 
-        steps { 
-           sh 'echo "testing application..."'
-        }
-      }
-
-         stage("Deploy application") { 
-         steps { 
-           sh 'echo "deploying application..."'
-         }
-
-     }
-  
-   	}
-
-   }
+    }
+}
