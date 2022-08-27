@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-                git 'https://github.com/Komala-3/demo.git'
+                git 'https://github.com/kishore5632/job_portal'
             }
         }
         stage('Test') {
@@ -20,3 +20,4 @@ pipeline {
      
     }
 }
+
