@@ -4,10 +4,11 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-                git 'https://github.com/kishore5632/job_portal'
+                git 'https://https://github.com/kishore5632/django_portal1'
+           
             }
         }
-        stage('Test') {
+        stage('Test') 
             steps {
                 echo "im going to test my repo"
             }
